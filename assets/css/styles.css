@@ -1,0 +1,380 @@
+/* ===== Virtual University Events Guide ===== */
+
+/* ---------- 1. Colors (edit the values here only) ---------- */
+:root {
+  /* main colors */
+  --blue: #1F4FE0;
+  --teal: #0E9F94;
+  --orange: #F59E0B;
+
+  /* page colors */
+  --bg: #F5F8FC;
+  --surface: #FFFFFF;
+  --text: #14213D;
+  --muted: #5B6B84;
+  --border: #DDE5F0;
+
+  /* gradients */
+  --grad: linear-gradient(135deg, var(--blue), var(--teal));
+  --grad-sports: linear-gradient(135deg, #1F4FE0, #0E9F94);
+
+  --grad-arts: linear-gradient(135deg, #F97316, #DB2777);
+
+  --grad-academic: linear-gradient(135deg, #4F46E5, #1F4FE0);
+
+  --grad-culture: linear-gradient(135deg, #7C3AED, #DB2777);
+
+  --grad-workshops: linear-gradient(135deg, #0E9F94, #16A34A);
+
+  --grad-family: linear-gradient(135deg, #D97706, #EA580C);
+}
+
+/* Dark mode: lighter colors so they stay readable on a dark background */
+[data-bs-theme="dark"] {
+  --blue: #6B8CFF;
+  --teal: #2DD4BF;
+  --bg: #0B1020;
+  --surface: #141B2D;
+  --text: #E8EEFB;
+  --muted: #97A6C2;
+  --border: #26304A;
+}
+
+
+/* ---------- 2. General ---------- */
+body {
+  font-family: "Tajawal", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+}
+
+.text-muted {
+  color: var(--muted) !important;
+}
+
+/* Visible outline for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+
+/* ---------- 3. Navbar ---------- */
+.site-nav {
+  background: var(--surface);
+  /* so the blue logo stays visible */
+  border-bottom: 1px solid var(--border);
+}
+
+.site-nav .nav-link,
+.site-nav .navbar-brand {
+  color: var(--text);
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+  color: var(--blue);
+}
+
+.site-nav .nav-link.active {
+  box-shadow: inset 0 -3px 0 var(--teal);
+}
+
+.navbar-toggler {
+  border-color: var(--border);
+}
+
+/* White circle behind the logo so it is visible in dark mode */
+.logo-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.logo-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* ---------- 4. Footer ---------- */
+.site-footer {
+  background: var(--grad);
+  color: #fff;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+[data-bs-theme="dark"] .site-footer {
+  color: var(--bg);
+}
+
+
+/* ---------- 5. Buttons ---------- */
+.btn-grad {
+  background: var(--grad);
+  color: #fff;
+  border: 0;
+  font-weight: 700;
+}
+
+.btn-grad:hover {
+  color: #fff;
+  filter: brightness(1.08);
+}
+
+[data-bs-theme="dark"] .btn-grad,
+[data-bs-theme="dark"] .btn-grad:hover {
+  color: var(--bg);
+}
+
+
+/* ---------- 6. Home page ---------- */
+.hero {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.hero-logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 8px;
+}
+
+.today-card {
+  border: 2px solid var(--orange);
+  background: var(--surface);
+  border-radius: 14px;
+}
+
+.featured-slide {
+  display: block;
+  height: 380px;
+  border-radius: 16px;
+  font-size: 6rem;
+  text-decoration: none;
+}
+
+.featured-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  /* stick to the bottom */
+  padding: 1.5rem;
+  color: #fff;
+  font-size: 1rem;
+  z-index: 2;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .85));
+}
+
+
+/* ---------- 7. Category chips ---------- */
+.chip {
+  border-radius: 999px;
+  padding: .4em .9em;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.chip-academic {
+  background: var(--grad-academic);
+}
+
+.chip-culture {
+  background: var(--grad-culture);
+}
+
+.chip-family {
+  background: var(--grad-family);
+}
+
+.chip-sports {
+  background: var(--grad-sports);
+}
+
+.chip-arts {
+  background: var(--grad-arts);
+}
+
+.chip-workshops {
+  background: var(--grad-workshops);
+}
+
+
+/* ---------- 8. Event cover (gradient + icon, covered by the photo if it exists) ---------- */
+.cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  overflow: hidden;
+}
+
+.cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover .chip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: .8rem;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+}
+
+.cover-fallback {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, .9);
+  font-size: 3rem;
+}
+
+.cover-tech {
+  background: var(--grad-tech);
+}
+
+.cover-academic {
+  background: var(--grad-academic);
+}
+
+.cover-culture {
+  background: var(--grad-culture);
+}
+
+.cover-community {
+  background: var(--grad-community);
+}
+
+
+/* ---------- 9. Event cards ---------- */
+.event-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(20, 33, 61, .12);
+}
+
+.event-card .cover {
+  height: 170px;
+}
+
+.event-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.event-card-link:focus-visible {
+  outline: 3px solid var(--orange);
+  /* var(--grad) is not a valid outline color */
+  outline-offset: 3px;
+  border-radius: 16px;
+}
+
+.event-meta {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+
+/* ---------- 10. Team page ---------- */
+.team-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+
+/* ---------- 11. Event details page ---------- */
+.details-cover {
+  min-height: 360px;
+  border-radius: 16px;
+}
+
+.map-placeholder {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: var(--muted);
+}
+
+.map-placeholder span {
+  font-size: 2.5rem;
+}
+
+.gallery-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+
+/* ---------- 12. Scroll to top button ---------- */
+/* main.js adds/removes the "hidden" attribute when the user scrolls */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1030;
+}
+
+#scrollTopBtn[hidden] {
+  display: none;
+}
+
+
+/* ---------- 13. Small screens ---------- */
+@media (max-width: 575.98px) {
+  .featured-slide {
+    height: 300px;
+  }
+
+  .details-cover {
+    min-height: 240px;
+  }
+}
+
+
+/* ---------- 14. Accessibility: respect "reduce motion" ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .event-card {
+    transition: none;
+  }
+
+  .event-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="تعرّف إلى دليل فعاليات الجامعة الافتراضية، رسالته ورؤيته وفريق العمل وسياسات تقديم الفعاليات والنشر.">
+  <meta name="theme-color" content="#f5f7fc">
+  <title>عن الدليل |   الجامعة الافتراضية</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <script>
+    try {
+      document.documentElement.setAttribute("data-bs-theme", localStorage.getItem("theme") || "light");
+    } catch (_) { }
+  </script>
+  <style>
+    :root {
+      --about-primary: #5367d8;
+      --about-secondary: #7656c9;
+      --about-ink: #202744;
+      --about-muted: #68718a;
+      --about-surface: var(--bs-body-bg, #fff);
+      --about-border: rgba(105, 119, 160, .16);
+      --about-soft: rgba(83, 103, 216, .08);
+    }
+
+    body {
+      font-family: "Tajawal", sans-serif;
+      color: var(--bs-body-color);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .navbar-brand {
+      font-family: "Cairo", sans-serif;
+    }
+
+    .about-main {
+      padding-top: 2.25rem;
+      padding-bottom: 4rem;
+    }
+
+    .about-hero {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      padding: clamp(2rem, 5vw, 4.25rem);
+      border-radius: 1.75rem;
+      color: #fff;
+      background: linear-gradient(125deg, #3449b8 0%, #5367d8 52%, #7959c9 100%);
+      box-shadow: 0 22px 55px rgba(62, 76, 174, .20);
+    }
+
+    .about-hero::before,
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 50%;
+      width: 290px;
+      height: 290px;
+    }
+
+    .about-hero::before {
+      inset: auto auto -170px -70px;
+    }
+
+    .about-hero::after {
+      width: 190px;
+      height: 190px;
+      inset: -105px 12% auto auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .4rem .85rem;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, .15);
+      color: inherit;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.45;
+      font-weight: 800;
+      margin: 1rem 0 .75rem;
+    }
+
+    .about-hero p {
+      max-width: 760px;
+      color: rgba(255, 255, 255, .88);
+      font-size: 1.15rem;
+      line-height: 1.95;
+    }
+
+    .section-block {
+      margin-top: 3.5rem;
+    }
+
+    .section-heading {
+      margin-bottom: 1.35rem;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+      font-weight: 800;
+      margin-bottom: .45rem;
+    }
+
+    .section-heading p {
+      color: var(--about-muted);
+      margin: 0;
+    }
+
+    .about-card {
+      height: 100%;
+      padding: 1.6rem;
+      border: 1px solid var(--about-border);
+      border-radius: 1.25rem;
+      background: var(--about-surface);
+      box-shadow: 0 10px 30px rgba(36, 48, 92, .045);
+    }
+
+    .about-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--about-soft);
+      color: var(--about-primary);
+      font-size: 1.45rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-card h3 {
+      font-size: 1.12rem;
+      font-weight: 800;
+      margin-bottom: .65rem;
+    }
+
+    .about-card p,
+    .about-card li {
+      color: var(--about-muted);
+      line-height: 1.9;
+    }
+
+    .about-card ul {
+      padding-right: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    .team-card {
+      height: 100%;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border: 1px solid var(--about-border);
+      border-radius: 1.2rem;
+      background: var(--about-surface);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(36, 48, 92, .09);
+    }
+
+    .team-avatar {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #e5e9ff, #eee5ff);
+      color: #4b58b8;
+      font-family: "Cairo", sans-serif;
+      font-size: 1.65rem;
+      font-weight: 800;
+      border: 4px solid var(--bs-body-bg);
+      box-shadow: 0 0 0 1px var(--about-border);
+    }
+
+    .team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .team-card h3 {
+      font-family: "Tajawal", sans-serif;
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin-bottom: .3rem;
+    }
+
+    .team-role {
+      display: inline-block;
+      color: var(--about-primary);
+      background: var(--about-soft);
+      border-radius: 99px;
+      padding: .28rem .75rem;
+      font-size: .85rem;
+      font-weight: 700;
+    }
+
+    .team-note {
+      color: var(--about-muted);
+      font-size: .9rem;
+      margin: .75rem 0 0;
+    }
+
+    .policy-card {
+      border: 1px solid var(--about-border);
+      border-radius: 1.2rem;
+      padding: 1.4rem;
+      height: 100%;
+      background: var(--about-surface);
+    }
+
+    .policy-number {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--about-primary), var(--about-secondary));
+      font-weight: 800;
+      margin-bottom: .8rem;
+    }
+
+    .policy-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .policy-card p {
+      color: var(--about-muted);
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    .about-cta {
+      padding: 2rem;
+      border-radius: 1.5rem;
+      text-align: center;
+      background: var(--about-soft);
+      border: 1px solid var(--about-border);
+    }
+
+    .about-cta h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+    }
+
+    .about-cta p {
+      color: var(--about-muted);
+    }
+
+    .btn-about {
+      border: 0;
+      color: #fff;
+      background: linear-gradient(110deg, var(--about-primary), var(--about-secondary));
+    }
+
+    .btn-about:hover {
+      color: #fff;
+      filter: brightness(.96);
+    }
+
+    @media (max-width:575.98px) {
+      .about-main {
+        padding-top: 1.25rem;
+      }
+
+      .about-hero {
+        border-radius: 1.2rem;
+      }
+
+      .about-cta .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .team-card {
+        transition: none;
+      }
+
+      .team-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg site-nav" aria-label="التنقل الرئيسي">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <span class="logo-badge"><img src="assets/img/logo.png" alt="شعار دليل الفعاليات"></span>
+          دليل الفعاليات
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="فتح القائمة">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">كل الفعاليات</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">عن الدليل</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+          </ul>
+          <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button">🌙 داكن</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container about-main">
+    <section class="about-hero" aria-labelledby="about-title">
+      <span class="eyebrow"> تعرّف إلى منصتنا</span>
+      <h1 id="about-title">مساحة واحدة تجمع مجتمعنا الجامعي</h1>
+      <p class="mb-0">دليل فعاليات الجامعة الافتراضية منصة تنظّم الفعاليات الأكاديمية والثقافية والاجتماعية في مكان
+        واحد، وتقرّب فرص المعرفة والتواصل والمشاركة من جميع أفراد المجتمع الجامعي.</p>
+    </section>
+
+    <section class="section-block" aria-labelledby="mission-title">
+      <div class="section-heading">
+        <h2 id="mission-title">هدف الدليل ورسالته ورؤيته</h2>
+        <p>نعمل على جعل الوصول إلى الأنشطة الجامعية أوضح وأسهل وأكثر شمولاً.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">🎯</div>
+            <h3>هدفنا</h3>
+            <p class="mb-0">تجميع معلومات الفعاليات في مرجع منظم يساعد الطلاب على اكتشاف الأنشطة المناسبة، ومعرفة
+              تفاصيلها ومواعيدها وطرق المشاركة فيها.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">💬</div>
+            <h3>رسالتنا للمجتمع</h3>
+            <p class="mb-0">تعزيز التواصل والانتماء، وتشجيع تبادل الخبرات والمبادرات، وإتاحة فرص المشاركة والتعلّم لجميع
+              المهتمين ضمن مجتمع جامعي متفاعل.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">🌟</div>
+            <h3>رؤيتنا</h3>
+            <p class="mb-0">أن يكون الدليل وجهة موثوقة وسهلة الاستخدام لاكتشاف الفعاليات الجامعية، وأن يسهم في بناء بيئة
+              معرفية واجتماعية نشطة ومتعاونة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="how-title">
+      <div class="section-heading">
+        <h2 id="how-title">كيف يحقق الدليل أهدافه؟</h2>
+        <p>من اكتشاف الفعالية إلى الاستعداد للمشاركة.</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-3">
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">🔎</div>
+            <h3>اكتشاف سهل</h3>
+            <p class="mb-0">تصفّح الفعاليات وابحث عنها وصنّفها للوصول إلى ما يناسب اهتماماتك.</p>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">📋</div>
+            <h3>معلومات واضحة</h3>
+            <p class="mb-0">اطّلع على وصف الفعالية وموعدها ومكانها وطريقة التسجيل من صفحة التفاصيل.</p>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">🤝</div>
+            <h3>مجتمع متواصل</h3>
+            <p class="mb-0">اكتشف مبادرات الطلاب والأنشطة التي تفتح المجال للتعارف وتبادل الخبرات.</p>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">📣</div>
+            <h3>مشاركة المبادرات</h3>
+            <p class="mb-0">تعرّف إلى آلية إرسال الفعاليات المقترحة ومعايير مراجعتها قبل النشر.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="team-title">
+      <div class="section-heading">
+        <h2 id="team-title">فريق العمل والشركاء</h2>
+        <p>مساحة للتعريف بالأشخاص والجهات التي تسهم في إعداد الدليل وتطويره.</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg">
+          <article class="team-card">
+            <div class="team-avatar"><img src="assets/img/team/member-1.jpg" alt="عبدالرحمن كامل"
+                onerror="this.remove();this.parentElement.textContent='١';"></div>
+            <h3>عبدالرحمن كامل </h3><span class="team-role">المسؤول عن برمجة الفلترة والتحقق من النماذج</span>
+
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg">
+          <article class="team-card">
+            <div class="team-avatar"><img src="assets/img/team/member-2.jpg" alt=" محمد بيرقدار"
+                onerror="this.remove();this.parentElement.textContent='٢';"></div>
+            <h3>محمد بيرقدار</h3><span class="team-role">مسؤول عن التصميم المتجاوب css&Bootstrap وتنسيق الألوان</span>
+
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg">
+          <article class="team-card">
+            <div class="team-avatar"><img src="assets/img/team/member-3.jpg" alt="دانيال عبدالدين"
+                onerror="this.remove();this.parentElement.textContent='٣';"></div>
+            <h3>دانيال عبدالدين</h3><span class="team-role"> مسؤوول عن هيكلة صفحات HTML وتنسيق تجربة المستخدم و وضع قالب للمشروع</span>
+
+          </article>
+        </div>
+        <div class="col-6 col-md-6 col-lg">
+          <article class="team-card">
+            <div class="team-avatar"><img src="assets/img/team/member-4.jpg" alt="رهف محفوظ"
+                onerror="this.remove();this.parentElement.textContent='٤';"></div>
+            <h3>رهف محفوظ</h3><span class="team-role">مسؤوولة عن التحقق من النماذج وحفظ التفضيلات  </span>
+
+          </article>
+        </div>
+        <div class="col-6 col-md-6 col-lg">
+          <article class="team-card">
+            <div class="team-avatar"><img src="assets/img/team/member-5.jpg" alt="هيلين الكفيري"
+                onerror="this.remove();this.parentElement.textContent='٥';"></div>
+            <h3>هيلين الكفيري</h3><span class="team-role"> مسؤولة عن مراجعة بيانات الفعاليات والتنسيق </span>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="policy-title">
+      <div class="section-heading">
+        <h2 id="policy-title">سياسة تقديم الفعاليات ومعايير النشر</h2>
+        <p>إرشادات مختصرة تساعد على تقديم محتوى واضح وموثوق ومناسب للمجتمع الجامعي.</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <article class="policy-card"><span class="policy-number">١</span>
+            <h3>قدّم بيانات مكتملة</h3>
+            <p>أرسل عنواناً واضحاً، ووصفاً مختصراً، وتاريخاً ووقتاً محددين، ومكاناً أو رابط حضور، ووسيلة تواصل أو تسجيل
+              عند الحاجة.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="policy-card"><span class="policy-number">٢</span>
+            <h3>التزم بملاءمة المحتوى</h3>
+            <p>ينبغي أن تكون الفعالية ذات صلة بالمجتمع الجامعي، وأن تحترم القيم والأنظمة والسياسات المعمول بها.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="policy-card"><span class="policy-number">٣</span>
+            <h3>قدّم معلومات دقيقة</h3>
+            <p>تأكد من صحة التفاصيل والروابط، واحصل على الموافقات اللازمة لاستخدام الصور أو المواد المرفقة.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="policy-card"><span class="policy-number">٤</span>
+            <h3>مراجعة قبل النشر</h3>
+            <p>تخضع الطلبات للمراجعة للتأكد من اكتمال البيانات ووضوحها وملاءمة محتواها، وقد يُطلب تعديل المعلومات
+              الناقصة.</p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="policy-card"><span class="policy-number">٥</span>
+            <h3>محتوى غير مقبول</h3>
+            <p>لا تُنشر الإعلانات المضللة أو المعلومات غير الموثوقة أو المحتويات المسيئة أو المخالفة للأنظمة والسياسات.
+            </p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="policy-card"><span class="policy-number">٦</span>
+            <h3>تحديث أو تصحيح التفاصيل</h3>
+            <p>على الجهة المقدمة إبلاغ فريق الدليل عند تغيير موعد الفعالية أو مكانها أو إلغائها، لضمان بقاء المعلومات
+              محدثة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block about-cta" aria-labelledby="cta-title">
+      <h2 id="cta-title">كن جزءاً من مجتمع الفعاليات</h2>
+      <p class="mb-4">اكتشف الأنشطة القادمة أو تواصل معنا لإرسال فعالية مقترحة.</p>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-2">
+        <a href="events.html" class="btn btn-about px-4 py-2">استكشف الفعاليات</a>
+        <a href="contact.html" class="btn btn-outline-primary px-4 py-2">أرسل فعالية</a>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="row g-4  ">
+
+        <!-- نبذة عن الدليل -->
+        <div class="p-4 col-6 col-md-3 col-lg-5">
+
+          <div class="footer-brand">
+            <h2> <span>دليل فعاليات الجامعة الافتراضية</span></h2>
+          </div>
+
+          <p class="footer-description">
+            منصتك لاكتشاف الفعاليات الأكاديمية والثقافية والاجتماعية،
+          </p>
+          <p>
+            والتعرّف على الفرص التي تثري تجربتك الجامعية،
+          </p>
+          <p>
+            وتعزز التواصل بين أفراد المجتمع الجامعي.
+          </p>
+          <p>
+            صُنع بشغف لخدمة المجتمع الجامعي
+          </p>
+        </div>
+
+        <!-- روابط سريعة -->
+        <div class="p-4 col-6 col-md-3 col-lg-3">
+
+          <h2 class="footer-title">روابط سريعة</h2>
+
+          <nav class="footlinkser-" aria-label="روابط تذييل الصفحة">
+            <p><a href="index.html" style="text-decoration: none;">الرئيسية</a></p>
+
+            <p><a href="events.html" style="text-decoration: none;">جميع الفعاليات</a></p>
+
+            <p><a href="about.html" style="text-decoration: none;">عن الدليل</a></p>
+
+            <p><a href="contact.html" style="text-decoration: none;">اتصل بنا</a></p>
+          </nav>
+
+        </div>
+
+        <!-- معلومات التواصل -->
+        <div class="p-4 col-6 col-md-3 col-lg-4">
+
+          <h2 class="footer-title">تواصل معنا</h2>
+
+          <div class="footer-contact">
+
+            <p><a href="https://www.gmail.com/" target="_blank" rel="noopener" style="text-decoration: none;"> events@svu.com  </a></p>
+            <p><a href="https://www.facebook.com/" target="_blank" rel="noopener" style="text-decoration: none;">فيسبوك</a></p>
+            <p><a href="https://www.instagram.com/" target="_blank" rel="noopener" style="text-decoration: none;" >إنستغرام</a></p>
+            <p><a href="https://t.me/" target="_blank" rel="noopener" style="text-decoration: none;">تيليغرام</a></p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <hr class="footer-divider">
+
+      <!-- حقوق النشر -->
+      <div class="footer-bottom">
+
+        <p class="text-center">
+          دليل فعاليات الجامعة الافتراضية © 2026
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <button id="scrollTopBtn" class="btn btn-grad rounded-circle" type="button" aria-label="العودة إلى أعلى الصفحة"
+    hidden>↑
+  </button>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/events.js?v=2.0"></script>
+  <script src="assets/js/main.js?v=2.0"></script>
+
+
+
+</body>
+
+</html>
